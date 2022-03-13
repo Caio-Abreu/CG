@@ -114,9 +114,9 @@ def DrawGLScene():
     
     glEnd()
     
-    xrot = xrot + 0.01                 # ROTACAO DENTRO DO EIXO X 
-    yrot = yrot + 0.01                 # ROTACAO DENTRO DO EIXO Y 
-    zrot = zrot + 0.01                 # ROTACAO DENTRO DO EIXO Z 
+    xrot = xrot + 0.01                 
+    yrot = yrot + 0.01                
+    zrot = zrot + 0.01                
 
     glutSwapBuffers()
 
@@ -124,7 +124,7 @@ def DrawGLScene():
 def keyPressed(tecla, x, y):
     print("Tecla %s %d %d" % (tecla,x,y))
     global dx, dy, dz
-    if tecla == b'\x1b': # ESCAPE
+    if tecla == b'\x1b':
         glutLeaveMainLoop() 
     elif tecla == b'x' or tecla == b'X':
         print('x')
@@ -146,13 +146,13 @@ def teclaEspecialPressionada(tecla, x, y):
     global xrot, yrot, zrot, dx, dy, dz
     if tecla == GLUT_KEY_LEFT:
         print("ESQUERDA")
-        xrot -= dx                 # ROTACAO DENTRO DO EIXO X 
-        yrot -= dy                 # ROTACAO DENTRO DO EIXO Y
+        xrot -= dx                
+        yrot -= dy                
         zrot -= dz                     
     elif tecla == GLUT_KEY_RIGHT:
         print("DIREITA")
-        xrot += dx                 # ROTACAO DENTRO DO EIXO X 
-        yrot += dy                 # ROTACAO DENTRO DO EIXO Y
+        xrot += dx                 
+        yrot += dy                 
         zrot += dz                     
     elif tecla == GLUT_KEY_UP:
         print("CIMA")
